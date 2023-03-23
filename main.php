@@ -1,32 +1,7 @@
-<!DOCTYPE html> 
-<html>
-    <head>
-        <title>
-            Final Project Web Development
-        </title>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <div id="Page">
-            
-            <header>
-                <h1>
-                    Welcome to Netters!
-                    
-                </h1>
-                
-                <nav>
-                    <ul>
-                        <li><a href="index.php">HOME</a></li>
-                        <li><a href="">LOGIN</a></li>
-                        <li><a href="">REGISTER</a></li>
-                        <li><a href="">HISTORY</a></li>
-                      
-                    </ul>
-                </nav>
-            </header>
-           
-                <div id="content">
+<?php
+    include_once 'header.php';
+?>
+<div id="content">
                     <article>
                         <figure>
                             <img src = "images/logo.jpg" alt = "game logo">
@@ -86,14 +61,6 @@
                     </p>
                 </section>
             </aside>
-            
-            <footer>
-                © 2023 - <?php echo date("Y");
-                echo "<br/>Developed by <br/>Hebert Pierre Canel<br/>RishabhSareen<br/>Loveleen Kaur"
-                ?>
-                
-            </footer>
-            
-        </div>
-    </body>
-</html> 
+<?php
+    include_once 'footer.php';
+?>
