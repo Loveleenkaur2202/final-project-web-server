@@ -70,9 +70,7 @@
     mysqli_close($conn);
     ?>
     <br />
-    <b>
-        <a href="main.php">Go To Home Page</a>
-    </b>
+    <b><a href="main.php">Go To Home Page</a></b>
     <br /><br /><br /><br /><br />
     <?php
     include_once 'footer.php'

@@ -29,8 +29,7 @@
 			<li>Includes at least one special character (@#$%^&amp;*)</li>
 		</ul>
 			<input type="submit" name="modify" value="Modify">
-			<input type="submit" value="signin" onclick="window.location.href='signin.php'">
-			
+			<a href="RegistrationForm.php"><input type="button" value="signUp"></a>
 			
 			
 			<div class="error-message">

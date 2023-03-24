@@ -2,59 +2,34 @@
 <html>
     <head>
             <Title>User Login</Title>
-            <link rel="stylesheet" href="./css/style.css">
+            <link href="css/loginStyle.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-    
-        <center>
+    <?php
+    include_once 'header.php';
+   
+?>
         
-        <form action="#" method="post">
-        <label for="usrname">Username:</label>
-        <br><br>
-        <input type="text" name="usrname" id="usrname">
-        <br><br>
-        <label for="paswd">Password:</label>
-        <br><br>
-        <input type="text" name="paswd" id="paswd">
-        <br><br>
-        <input type="submit" name= "Connect" value="Connect" >
-        <br>
-        <input type="submit" name= "Sign-Up" value = "Sign-Up" height="50" width="50">
-    
-    
-    
-    
-        </center>
-    
-        <?php
-
-            if(isset($_POST["Connect"])){
-             $username = $_POST = ["usrname"];
-                $password = $_POST["paswd"];
-                if(!($username="" and $password="")){
-
-                header("Location:Index.php");
-                exit();
-                }
-                
-
-            }
-            elseif(isset($_POST["Sign-Up"])){
-
-            }
+        <form method="post" action="login.php">
         
-
+            <label for="usrname">Username:</label>
+            <input type="text" name="username" id="username">
+            
+            <label for="password">Password:</label>
+            <input type="text" name="password" id="password">
+            
+            <input type="submit" name= "Connect" value="Connect">
+            <a href="RegistrationForm.php"><input type="button" value="signUp"></a>
         
-    
-    
-        ?>
-        
-        <div class="error-message">
+            <div class="error-message">
 
-        </div>
+            </div>
 
 
 
     </form>
+    <?php
+    include_once 'footer.php';
+?>
     </body>
 </html>
