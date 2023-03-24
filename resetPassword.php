@@ -31,9 +31,7 @@
         $pattern = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*])[A-Za-z\d@#$%^&*]{8,}$/';
         //Validate the password against the regular expression
         if (preg_match($pattern, $password)) {
-            echo "Password is good!!You may continue";
-
-
+            echo "<b><p style='color:red;' >" ."Success!"."</p></b>";
             // Check if the entered username exists in the player table
             $sql = "SELECT registrationOrder FROM player WHERE userName='$username'";
             $result = mysqli_query($conn, $sql);
@@ -65,7 +63,8 @@
         }
     } else {
         // Password does not meet requirements
-        echo "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (@#$%^&*)";
+        echo "<b><p style='color:red;' >" ."Password must be at least 8 characters long and include at 
+        least one uppercase letter, one lowercase letter, one number, and one special character (@#$%^&*)"."</p></b>";
         echo '<a href="registrationForm.php">Go Back to Password Reset Page</a>';
     }
     mysqli_close($conn);
