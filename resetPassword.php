@@ -54,18 +54,18 @@
                     }
                 } else {
                     echo "<b><p style='color:red;' >" . "New password and confirm password do not match.<br/>" . "</p></b>";
-                    echo '<a href="registrationForm.php">Go Back to Password Reset Page</a>';
+                    echo '<a href="passwordModificationForm.php">Go Back to Password Reset Page</a>';
                 }
             }
         } else {
             echo "<b><p style='color:red;'>" . "Username not found.<br/>" . "</p></b>";
-            echo '<a href="registrationForm.php">Go Back to Password Reset Page</a>';
+            echo '<a href="passwordModificationForm.php">Go Back to Password Reset Page</a>';
         }
     } else {
         // Password does not meet requirements
         echo "<b><p style='color:red;' >" ."Password must be at least 8 characters long and include at 
         least one uppercase letter, one lowercase letter, one number, and one special character (@#$%^&*)"."</p></b>";
-        echo '<a href="registrationForm.php">Go Back to Password Reset Page</a>';
+        echo '<a href="passwordModificationForm.php">Go Back to Password Reset Page</a>';
     }
     mysqli_close($conn);
     ?>
