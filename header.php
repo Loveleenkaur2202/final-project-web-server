@@ -19,7 +19,7 @@
                     <ul>
                         <li><a href="main.php">HOME</a></li>
                         <li><a href="">LOGIN</a></li>
-                        <li><a href="registrationForm.php">REGISTER</a></li>
+                        <li><a href="">REGISTER</a></li>
                         <li><a href="">HISTORY</a></li>
                       
                     </ul>

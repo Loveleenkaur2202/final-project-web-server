@@ -6,8 +6,11 @@
     
 </head>
 <body>
-	<br/><br/><br/><br/><br/><br/>
-		<form method="post" action="">
+<?php
+    include_once 'header.php';
+?>
+	
+		<form method="post" action="resetPassword.php">
 			
 			<label for="username">Existing Username:</label>
 			<input type="text" id="username" name="username" required>
@@ -17,25 +20,26 @@
 			
 			<label for="confirm_password">Confirm New Password:</label>
 			<input type="password" id="confirm_password" name="confirm_password" required>
-			
+			<p>Password must meet the following requirements:</p>
+		<ul>
+			<li>At least 8 characters long</li>
+			<li>Includes at least one uppercase letter</li>
+			<li>Includes at least one lowercase letter</li>
+			<li>Includes at least one number</li>
+			<li>Includes at least one special character (@#$%^&amp;*)</li>
+		</ul>
 			<input type="submit" name="modify" value="Modify">
-			<input type="submit" name="signin" value="Sign-In">
+			<input type="submit" value="signin" onclick="window.location.href='signin.php'">
 			
-			<?php 
-				
-				if (isset($_POST['modify'])) {
-					
-				}
-				else if (isset($_POST['signin'])) {
-					header("Location: login.php");
-					exit();
-				}
-			?>
+			
 			
 			<div class="error-message">
 				
 			</div>
 		</form>
+	<?php 
+    	include_once 'footer.php'
+    ?>
 	</div>
 </body>
 </html>
