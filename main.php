@@ -54,9 +54,9 @@
                 <section>
                     <h2>Contact Us</h2>
                     <p class="address">
-                        <br /><a href="#">Netters</a>
-                        <br /><a href="">Have Questions?</a>
-                        <br /><a href="">Talk with the developers</a>
+                        <br /><a href="main.php">Netters</a>
+                        <br /><a href="FAQ.php">Have Questions?</a>
+                        <br /><a href="contactDevelopers.php">Talk with the developers</a>
                         <br /><a href="RegistrationForm.php">Want to join?Click Here!</a>
                     </p>
                 </section>
