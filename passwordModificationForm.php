@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Password Modification Form</title>
-	<link href="css/registerFormStyle.css" rel="stylesheet" type="text/css">
+	<link href="css/passwordFormStyle.css" rel="stylesheet" type="text/css">
     
 </head>
 <body>
