@@ -12,52 +12,38 @@
     <?php
     include_once 'header.php';
     ?>
-    
-    <?php
-    // Connect to database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "kidsGames";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Get form data
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Check if username exists
-    $sql = "SELECT * FROM player WHERE userName='$username'";
-    $result = $conn->query($sql);
-    if ($result->num_rows == 0) {
-        echo "Username not found.";
-        echo '<b><a href="main.php">Go To Home Page</a></b>';
-    }
-
-    // Check if password is correct
-    $row = $result->fetch_assoc();
-    $registrationOrder = $row['registrationOrder'];
-    $sql = "SELECT * FROM authenticator WHERE registrationOrder='$registrationOrder'";
-    $result = $conn->query($sql);
-    $row = $result->fetch_assoc();
-    $stored_password = $row['passCode'];
-    if (password_verify($password, $stored_password)) {
-        // Password is correct, set session variable
+        <?php
+        
         session_start();
-        $_SESSION['username'] = $username;
-        $_SESSION['registrationOrder'] = $registrationOrder;
-        header("Location: gameLevel1.php");
-        exit();
-    } else {
-        // Password is incorrect
-        echo "Incorrect password.";
-        echo '<b><a href="main.php">Go To Home Page</a></b>';
-    }
+        $conn = mysqli_connect("localhost", "root", "", "kidsGames");
+        
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        
+        $sql = "SELECT p.fName, p.lName, p.userName, a.passCode FROM player p INNER JOIN authenticator a ON p.registrationOrder = a.registrationOrder WHERE p.userName='$username'";
+        $result = mysqli_query($conn, $sql);
+        
+        if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            if (password_verify($password, $row['passCode'])) {
+                $_SESSION['username'] = $row['userName'];
 
-    $conn->close();
-    ?>
+                header("Location: gameLevel1.php");
+            } else {
+                echo '<br/><br/><br/><b><a href="passwordModificationForm.php">Forgotten? Please, change your password</a></b><br/><br/><br/>';
+            }
+        } else {
+            
+            echo '<br/><br/><br/><b><a href="index.php">Sorry, you entered a wrong username</a></b><br/><br/><br/>';
+        }
+        
+        mysqli_close($conn);
+        ?>
+    
     <br />
     
     <br /><br /><br /><br /><br />
