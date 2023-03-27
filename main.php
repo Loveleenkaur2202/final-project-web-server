@@ -46,18 +46,18 @@
             <aside>
                 <section>
                     <h2>Know your Stats</h2>
-                    <br /><a href="">Check games played</a>
-                    <br /><a href="">Check games won</a>
-                    <br /><a href="">Check games lost</a>
+                    <br /><a href="history.php">Check score</a>
+                    <br /><a href="history.php">Check lives Used</a>
+                    <br /><a href="history.php">Check scoring date and time</a>
                     
                 </section>
                 <section>
                     <h2>Contact Us</h2>
                     <p class="address">
-                        <br /><a href="">Netters</a>
+                        <br /><a href="#">Netters</a>
                         <br /><a href="">Have Questions?</a>
                         <br /><a href="">Talk with the developers</a>
-                        <br /><a href="">Want to join?Click Here!</a>
+                        <br /><a href="RegistrationForm.php">Want to join?Click Here!</a>
                     </p>
                 </section>
             </aside>

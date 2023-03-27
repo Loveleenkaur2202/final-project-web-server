@@ -7,8 +7,7 @@
     <body>
     <?php
     include_once 'header.php';
-   
-?>
+    ?>
         
         <form method="post" action="login.php">
         

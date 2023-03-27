@@ -7,9 +7,12 @@
     <title>Register</title>
 </head>
 <body>
+<?php
+    include_once 'header.php';
+?>
 <main>
     <form action="createAccount.php" method="post">
-        <h1>Sign Up</h1>
+        <h2>Sign Up</h2>
         <div>
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
@@ -44,5 +47,8 @@
         
     </form>
 </main>
+<?php
+    include_once 'footer.php';
+?>
 </body>
 </html>

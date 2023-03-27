@@ -1,4 +1,7 @@
 <?php
+    include_once 'header.php';
+?>
+<?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the input values
     $username = $_POST['username'];
@@ -56,3 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "</center><br/><br/><br/>";
     }
 }
+?>
+<?php
+    include_once 'footer.php';
+?>
