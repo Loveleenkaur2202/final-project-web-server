@@ -10,7 +10,11 @@
 <?php
     include_once 'header.php';
 ?>
-<center><h2>Sign-up</h2></center>
+
+<br/>
+    <center>
+    <h3>Sign-Up</h3>
+    </center>
     <form action="register.php" method="post">
       <div>
         <label for="username">Username:</label>

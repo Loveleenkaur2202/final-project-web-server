@@ -35,16 +35,14 @@
       <h3>Question 1 What is Netters?</h3>
       <p>Its a fun game of letters and aplhabets.We offer fun games with 6 level and 6 lives a session.</p>
       <h3>Question 2 Why Choose Us?</h3>
-      <p>
-        <h2>Because we are the best!</h2>
-        
-            <ul>
-                <li> More than 40 years of experience</li>
-                <li>Almost 50 certified professional members</li>
-                <li>Services in more than 10 languages</li>
-                <li>Free of cost</li>
-            </ul>
-        </p>
+      <p>Because we are the best!
+        <ul>
+          <li> More than 40 years of experience</li>
+          <li>Almost 50 certified professional members</li>
+          <li>Services in more than 10 languages</li>
+          <li>Free of cost</li>
+        </ul>
+      </p>
       <h3>Question 3 How to contact members?</h3>
       <p>Go to page <a href = "contactDevelopers.php">Talk with developers</a></p>
     </div>

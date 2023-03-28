@@ -8,8 +8,12 @@
     ?>
   </head>
   <body>
-    <h2>Contact Developers</h2>
+  <br/>
+    <center>
+    <h3>Contact Developers</h3>
+    </center> 
     <form>
+    
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
       <label for="email">Email:</label>
