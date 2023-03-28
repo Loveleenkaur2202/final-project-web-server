@@ -8,7 +8,10 @@
     <?php
     include_once 'header.php';
     ?>
-        
+    <br/>
+    <center>
+    <h3>Login</h3>
+    </center>
         <form method="post" action="login.php">
         
             <label for="usrname">Username:</label>
