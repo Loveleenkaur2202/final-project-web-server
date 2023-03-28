@@ -10,12 +10,11 @@
 <?php
     include_once 'header.php';
 ?>
-<main>
-    <form action="createAccount.php" method="post">
-        <h2>Sign Up</h2>
-        <div>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
+<center><h2>Sign-up</h2></center>
+    <form action="register.php" method="post">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
     </div>
     <div>
       <label for="password">Password:</label>
@@ -46,7 +45,7 @@
         
         
     </form>
-</main>
+
 <?php
     include_once 'footer.php';
 ?>

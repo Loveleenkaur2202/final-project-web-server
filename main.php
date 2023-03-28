@@ -45,14 +45,14 @@
             
             <aside>
                 <section>
-                    <h2>Know your Stats</h2>
+                    <h3>Know your Stats</h3>
                     <br /><a href="history.php">Check score</a>
                     <br /><a href="history.php">Check lives Used</a>
                     <br /><a href="history.php">Check scoring date and time</a>
                     
                 </section>
                 <section>
-                    <h2>Contact Us</h2>
+                    <h3>Contact Us</h3>
                     <p class="address">
                         <br /><a href="main.php">Netters</a>
                         <br /><a href="FAQ.php">Have Questions?</a>
