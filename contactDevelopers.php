@@ -25,19 +25,25 @@
       <br>
       <input type="submit" value="Submit" onclick="return sendEmail();">
     </form>
-    <div id="message"></div>
     <script>
       function sendEmail() {
-        // You can add your own code here to send the email to the developers.
-        // For this example, we'll just display a message to the user.
-        /*const messageDiv = document.getElementById("message");
-        messageDiv.innerText = "Thank you for contacting us. Your message has been sent!"*/ 
-        alert("Thank you for contacting us. Your message has been sent!");
-        return false; // Prevent the form from actually submitting.
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+        if (name == '' || email == '' || subject == '' || message == '') {
+          alert('Please fill in all fields');
+          
+        } else {
+          alert('Thanks for the feedback');
+          
+           
+        }
+        return false; 
       }
-    </script>
-    <?php
+      </script>
+      <?php
         include_once 'footer.php';
-    ?>
+      ?>
   </body>
 </html>

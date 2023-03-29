@@ -13,7 +13,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "sysadm";
 $dbname = "kidsGames";
 
 // Create connection
@@ -25,7 +25,6 @@ if ($conn->connect_error) {
 
 $sql = "SELECT id, fName, lName, result, livesUsed, scoreTime FROM history";
 $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
     
     echo "<br/><br/><br/><br/>";
@@ -42,6 +41,7 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
+
 ?>
 <?php
     include_once 'footer.php';
