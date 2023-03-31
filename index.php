@@ -8,28 +8,42 @@
     <?php
     include_once 'header.php';
     ?>
-    <br/>
-    <center>
-    <h3>Login</h3>
-    </center>
-        <form method="post" action="login.php">
         
+        <form method="post" action="login.php">
+        <div>
             <label for="usrname">Username:</label>
             <input type="text" name="username" id="username">
-            
+        </div>
+        <div>  
             <label for="password">Password:</label>
-            <input type="text" name="password" id="password">
-            
+            <input type="password" name="password" id="password">
+            <button type="button" id="toggle-password">Show</button>
+        </div>
+        <br/><br/> 
+        <div>  
             <input type="submit" name= "Connect" value="Connect">
+            
             <a href="RegistrationForm.php"><input type="button" value="signUp"></a>
-        
-            <div class="error-message">
-
-            </div>
+        </div>
+          
 
 
 
     </form>
+    <script>
+    var toggleButton = document.getElementById('toggle-password');
+    var passwordField = document.getElementById('password');
+    
+    toggleButton.addEventListener('click', function() {
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        toggleButton.textContent = 'Hide';
+      } else {
+        passwordField.type = 'password';
+        toggleButton.textContent = 'Show';
+      }
+    });
+  </script>
     <?php
     include_once 'footer.php';
 ?>

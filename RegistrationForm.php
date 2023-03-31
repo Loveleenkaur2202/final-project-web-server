@@ -44,7 +44,7 @@
     </div>
     <div>
       <input type="submit" value="Create" name="create">
-      <input type="submit" value="Sign-In" name="signin">
+      <a href="RegistrationForm.php"><input type="button" value="signUp"></a>
     </div>
         
         
