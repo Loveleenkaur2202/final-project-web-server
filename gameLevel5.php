@@ -85,8 +85,8 @@ $conn->close();
     }
     ?>
     <br><br>
-    Max: <input type="text" name="max" required>
-    Min: <input type="text" name="min" required>
+    Last Letter: <input type="text" name="max" required>
+    First Letter: <input type="text" name="min" required>
     <br><br>
     <input type="submit" value="Submit">
 </form>
