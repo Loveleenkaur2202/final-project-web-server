@@ -1,7 +1,6 @@
 <?php
     include_once 'header.php';
-?>
-<?php
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the input values
     $username = $_POST['username'];
@@ -11,40 +10,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $lastName = $_POST['lastName'];
 
     // Validate the input values
-    $errors = [];
-    if (empty($username)) {
-        $errors[] = 'Please enter a username';
-    } else {
+   
         // Check if the username already exists in the database
         $conn = mysqli_connect('localhost', 'root', '', 'kidsGames');
         $result = mysqli_query($conn, "SELECT * FROM player WHERE userName='$username'");
         if (mysqli_num_rows($result) > 0) {
-            $errors[] = 'Sorry, this username already exists. Please, choose another one.';
+            echo '<br/><br/><br/><h2><a href = "RegistrationForm.php">Sorry, this username already exists. Please, choose another one.</a><h2><br/><br/><br/>';
+            
         }
-    }
+   
 
-    if (empty($password)) {
-        $errors[] = 'Please enter a password';
-    }
-
-    if ($password !== $confirmPassword) {
-        $errors[] = 'Sorry, you entered 2 different passwords.';
-    }
-
-    if (empty($firstName)) {
-        $errors[] = 'Please enter your first name';
-    } else if (!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
-        $errors[] = 'Sorry, your first name can only contain letters and spaces.';
-    }
-
-    if (empty($lastName)) {
-        $errors[] = 'Please enter your last name';
-    } else if (!preg_match("/^[a-zA-Z ]*$/",$lastName)) {
-        $errors[] = 'Sorry, your last name can only contain letters and spaces.';
-    }
-
+   else{
     // Insert the user data into the database
-    if (empty($errors)) {
+
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
         $registrationTime = date('Y-m-d H:i:s');
         $query = "INSERT INTO player (fName, lName, userName, registrationTime) VALUES ('$firstName', '$lastName', '$username', '$registrationTime')";
@@ -59,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "</center><br/><br/><br/>";
     }
 }
-?>
-<?php
+
     include_once 'footer.php';
 ?>

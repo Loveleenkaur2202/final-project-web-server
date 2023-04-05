@@ -9,7 +9,7 @@
     include_once 'header.php';
     ?>
         
-        <form method="post" action="login.php">
+        <form method="post" action="login.php" onsubmit="return checkForm()">
         <div>
             <label for="username">Username:</label>
             <input type="text" name="username" id="username">
@@ -31,6 +31,7 @@
 
     </form>
     <script>
+
     var toggleButton = document.getElementById('toggle-password');
     var passwordField = document.getElementById('password');
     
@@ -43,6 +44,18 @@
         toggleButton.textContent = 'Show';
       }
     });
+
+    function checkForm() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username.trim() == "" || password.trim() == "") {
+        alert("Please enter both username and password.");
+        return false;
+      }
+
+      return true;
+    }
   </script>
     <?php
     include_once 'footer.php';

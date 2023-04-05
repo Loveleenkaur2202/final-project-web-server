@@ -3,23 +3,37 @@
 <head>
 	<title>Password Modification Form</title>
 	<link href="css/passwordFormStyle.css" rel="stylesheet" type="text/css">
-    
+    <script>
+   			function checkForm() {
+				var username = document.getElementById("username").value;
+				var password = document.getElementById("password").value;
+				var confirm_password = document.getElementById("confirm_password").value;
+				
+				if (username.trim() == "" || password.trim() == "" || confirm_password.trim()=="") {
+					alert("Please check all the fields.");
+					return false;
+				}
+
+				return true;
+				}
+			
+		</script>
 </head>
 <body>
 <?php
     include_once 'header.php';
 ?>
 	
-		<form method="post" action="resetPassword.php">
+		<form method="post" action="resetPassword.php" onsubmit="return checkForm()">
 			
 			<label for="username">Existing Username:</label>
-			<input type="text" id="username" name="username" required>
+			<input type="text" id="username" name="username" >
 			
 			<label for="password">New Password:</label>
-			<input type="password" id="password" name="password" required>
+			<input type="password" id="password" name="password" >
 			
 			<label for="confirm_password">Confirm New Password:</label>
-			<input type="password" id="confirm_password" name="confirm_password" required>
+			<input type="password" id="confirm_password" name="confirm_password" >
 			<p>Password must meet the following requirements:</p>
 		<ul>
 			<li>At least 8 characters long</li>
@@ -31,11 +45,8 @@
 			<input type="submit" name="modify" value="Modify">
 			<a href="RegistrationForm.php"><input type="button" value="signUp"></a>
 			
-			
-			<div class="error-message">
-				
-			</div>
 		</form>
+		
 	<?php 
     	include_once 'footer.php'
     ?>
