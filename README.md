@@ -1,16 +1,18 @@
 # final-project-web-server
  
-LaSalle College 
+<h1>LaSalle College </h1>
 
-WEB SERVER APPLICATIONS DEVELOPMENT 1
-420-DW3-AS
+<h2>WEB SERVER APPLICATIONS DEVELOPMENT 1<h2>
+<p>420-DW3-AS<p>
 
-FINAL PROJECT
-Statement - Winter 2023
+<h3>FINAL PROJECT<h3>
+<p>Statement - Winter 2023<p>
 
-OBJECTIVE
-Create a simple PHP Web app, including a registration/login form and a kid's game.
+<h3>OBJECTIVE<h3>
+<p>Create a simple PHP Web app, including a registration/login form and a kid's game.<p>
 
-TABLE OF CONTENTS 
-•	Components (Registration, Login and Modification forms, Game forms, components, Database, History page)
-•	Additional technical specifications
+<h3>TABLE OF CONTENTS<h3> 
+<ul>
+<li>Components (Registration, Login and Modification forms, Game forms, components, Database, History page)</li>
+<li>Additional technical specifications</li>
+</ul>
