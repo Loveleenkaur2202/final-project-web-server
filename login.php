@@ -26,7 +26,7 @@
             if (password_verify($password, $row['passCode'])) {
                 $_SESSION['username'] = $row['userName'];
 
-                header("Location: gameLevel1.php");
+                header("Location: level1.php");
             } else {
                 echo '<br/><br/><br/><b><a href="passwordModificationForm.php">Forgotten? Please, change your password</a></b><br/><br/><br/>';
             }
