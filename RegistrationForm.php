@@ -10,7 +10,7 @@
         const firstName = document.forms["registerForm"]["firstName"].value;
         const lastName = document.forms["registerForm"]["lastName"].value;
 
-        // check if any field is empty
+        
         if (
           username === "" ||
           password === "" ||
@@ -22,20 +22,20 @@
           return false;
         }
 
-        // check if password matches the given pattern
+       
         const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*])[A-Za-z\d@#$%^&*]{8,}$/;
         if (!pattern.test(password)) {
           alert("Password must contain at least one lowercase letter, one uppercase letter, one number, one special character and be at least 8 characters long.");
           return false;
         }
 
-        // check if password and confirmPassword match
+        
         if (password !== confirmPassword) {
           alert("Passwords do not match");
           return false;
         }
 
-        // all validations passed
+        
         return true;
       }
     </script>

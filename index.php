@@ -25,11 +25,7 @@
             
             <a href="RegistrationForm.php"><input type="button" value="signUp"></a>
         </div>
-          
-
-
-
-    </form>
+      </form>
     <script>
 
     var toggleButton = document.getElementById('toggle-password');

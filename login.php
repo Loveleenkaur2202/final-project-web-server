@@ -11,15 +11,9 @@
     <br /><br /><br /><br /><br />
     <?php
     include_once 'header.php';
-    ?>
-        <?php
-        
-        session_start();
-        $conn = mysqli_connect("localhost", "root", "", "kidsGames");
-        
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
+    session_start();
+    include_once 'connection.php';
+  
         
         $username = $_POST['username'];
         $password = $_POST['password'];
