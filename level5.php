@@ -15,10 +15,10 @@
 		<div id="letters-container"></div>
 		<form id="game-form">
 			<label for="min-letter">Minimum Letter:</label>
-			<input type="text" id="min-letter" name="min-letter" maxlength="1" required>
+			<input type="text" id="min-letter" name="min-letter" maxlength="1" required pattern="[a-z]">
 			
 			<label for="max-letter">Maximum Letter:</label>
-			<input type="text" id="max-letter" name="max-letter" maxlength="1" required>
+			<input type="text" id="max-letter" name="max-letter" maxlength="1" required pattern="[a-z]">
 			<br><br><br>
 			<input type="submit" value="Submit">
             <a href ="logout.php"><input type="button" value="End session"></a>
