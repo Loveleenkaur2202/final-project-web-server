@@ -14,11 +14,12 @@
 		<h3>Find the maximum and minimum letters</h3>
 		<div id="letters-container"></div>
 		<form id="game-form">
+		
 			<label for="min-letter">Minimum Letter:</label>
-			<input type="text" id="min-letter" name="min-letter" maxlength="1" required pattern="[a-z]">
+			<input type="text" id="min-letter" name="min-letter" maxlength="1" required>
 			
 			<label for="max-letter">Maximum Letter:</label>
-			<input type="text" id="max-letter" name="max-letter" maxlength="1" required pattern="[a-z]">
+			<input type="text" id="max-letter" name="max-letter" maxlength="1" required>
 			<br><br><br>
 			<input type="submit" value="Submit">
             <a href ="logout.php"><input type="button" value="End session"></a>
@@ -27,6 +28,8 @@
 		</form>
 		<p id="result"></p>
 	</div>
+	
+ 
 	<script src="script.js"></script>
     <?php
         include_once 'footer.php';

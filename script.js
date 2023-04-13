@@ -11,29 +11,35 @@ $(document).ready(function() {
 		var userMinLetter = $("#min-letter").val().toLowerCase();
 		var userMaxLetter = $("#max-letter").val().toLowerCase();
 
+		// Check if user input is within the valid range of 'a' to 'z'
+		if (!isValidLetter(userMinLetter) || !isValidLetter(userMaxLetter)) {
+			$("#result").text("Invalid input! Please enter lowercase letters from 'a' to 'z'.");
+			return;
+		}
+
 		if (userMinLetter == minLetter && userMaxLetter == maxLetter) {
 			$("#result").text("Congratulations! You found the correct minimum and maximum letters.");
-            $("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
-            $("#game-form").append("<p><a href='level6.php'>Go to Next level</a></p>");
+			$("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
+			$("#game-form").append("<p><a href='level6.php'>Go to Next level</a></p>");
 
 		} else if (userMinLetter == minLetter) {
 			$("#result").text("You found the correct minimum letter, but the maximum letter is incorrect.");
-            $("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
+			$("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
 
 			lives--;
 		} else if (userMaxLetter == maxLetter) {
 			$("#result").text("You found the correct maximum letter, but the minimum letter is incorrect.");
-            $("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
+			$("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
 			lives--;
 		} else {
 			$("#result").text("Both minimum and maximum letters are incorrect.");
-            $("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
+				$("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
 			lives--;
 		}
 
 		if (lives <= 0) {
 			$("#result").text("Game over! You have used all 6 lives.");
-            $("#game-form").append("<p><a href='logout.php'>End Game</a></p>");
+				$("#game-form").append("<p><a href='logout.php'>End Game</a></p>");
 			$("#game-form :input").prop("disabled", true);
 		} else {
 			$("#game-form")[0].reset();
@@ -64,5 +70,9 @@ $(document).ready(function() {
 
 	function displayLetters(letters) {
 		$("#letters-container").text("Letters: " + letters);
+	}
+
+	function isValidLetter(letter) {
+		return /^[a-z]$/.test(letter);
 	}
 });
