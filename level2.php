@@ -19,7 +19,7 @@
     <input type="submit" value="Submit">
     <a href ="logout.php"><input type="button" value="End session"></a>
   </form>
-  <script src="level1Script.js"></script>
+  <script src="level2Script.js"></script>
 
 
 

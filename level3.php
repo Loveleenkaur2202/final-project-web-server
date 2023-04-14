@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
 
   sort($nums);
 
-  if ($sorted_nums === $nums) {
+  if ($sorted_nums == $nums) {
     echo "Congratulations! You sorted the numbers correctly.";
   } else {
     echo "Sorry, the sorted numbers did not match the original numbers. Please try again.";
@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
             <br><br>
             <input type="text" id="user_ans" name="user_ans">
             <br><br><br>
-			<input type="submit" value="Submit">
+			<input type="submit" value="Submit" name="submit">
       <a href ="logout.php"><input type="button" value="End session"></a>
             
              <br><br>

@@ -44,6 +44,7 @@
                     $("#game-form").append("<p><a href='level6.php'>Play Again</a></p>");
                     $("#game-form").append("<p><a href='main.php'>Home Page</a></p>");
                     $("#game-form").append("<p><a href='logout.php'>Sign Out</a></p>");
+					$("#game-form").append("<p><a href='history.php'>Check the history</a></p>");
 
 				} else {
 					lives--;

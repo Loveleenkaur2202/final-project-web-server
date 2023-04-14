@@ -1,22 +1,22 @@
-// Generate an array of 6 random letters from A to Z
+
 function generateRandomLetters() {
     let letters = [];
     for (let i = 0; i < 6; i++) {
-      let randomCharCode = Math.floor(Math.random() * 26) + 65; // Generate random char code between 65 (A) and 90 (Z)
+      let randomCharCode = Math.floor(Math.random() * 26) + 65; 
       let randomLetter = String.fromCharCode(randomCharCode);
       letters.push(randomLetter);
     }
     return letters;
   }
   
-  let lettersToGuess = generateRandomLetters(); // Generate random letters
+  let lettersToGuess = generateRandomLetters(); 
   
-  let lives = 6; // Number of lives
+  let lives = 6; 
   
-  // Display the randomly generated letters to the user
+  
   console.log("Randomly generated letters: " + lettersToGuess.join(" "));
   
-  // Get user input using a form
+
   document.getElementById("guessForm").addEventListener("submit", function (event) {
     event.preventDefault();
   
@@ -45,6 +45,7 @@ function generateRandomLetters() {
       console.log("Incorrect guesses. Lives remaining: " + lives);
       if (lives === 0) {
         console.log("Game over. You ran out of lives.");
+        location.href="logout.php";
       }
     }
   });

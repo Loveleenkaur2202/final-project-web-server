@@ -14,7 +14,6 @@
     session_start();
     include_once 'connection.php';
   
-        
         $username = $_POST['username'];
         $password = $_POST['password'];
         
@@ -25,7 +24,12 @@
             $row = mysqli_fetch_assoc($result);
             if (password_verify($password, $row['passCode'])) {
                 $_SESSION['username'] = $row['userName'];
+               
+            session_start();
+            $_SESSION['logged_in'] = true;
+// Redirect to the level 1 game page or set a cookie to remember the login status
 
+                
                 header("Location: level1.php");
             } else {
                 echo '<br/><br/><br/><b><a href="passwordModificationForm.php">Forgotten? Please, change your password</a></b><br/><br/><br/>';

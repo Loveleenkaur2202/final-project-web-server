@@ -26,8 +26,9 @@ function checkOrder() {
       lives--;
       if (lives === 0) {
         alert('Game Over! You ran out of lives.');
-        location.reload(); // Reload the page to start a new game
+        location.href = "logout.php"; // Reload the page to start a new game
       } else {
+        lives--;
         alert(`Wrong order! You have ${lives} lives remaining.`);
         
         return;

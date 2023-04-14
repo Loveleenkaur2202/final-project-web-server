@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header('Location: index.php'); // Redirect to login page
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +18,7 @@
 </head>
 
 <body>
-
+ 
   <h3>Ascending Order</h3>
   <p>Generated letters: <span id="letters"></span></p>
   <form id="form">

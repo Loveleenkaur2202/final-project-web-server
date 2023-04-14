@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 			<label for="user_input">Enter the numbers here separated by commas : </label>
 			<input type="text" id="user_input" name="user_input">
 			<br><br><br>
-			<input type="submit" value="Submit">
+			<input type="submit" value="Submit" name ="submit">
       <a href ="logout.php"><input type="button" value="End session"></a>
             
              <br><br>
