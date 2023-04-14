@@ -1,9 +1,11 @@
 <?php
 session_start();
+include_once 'header.php';
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header('Location: index.php'); // Redirect to login page
+   echo'<a href="index.php">Login to access game levels</a>';
     exit();
 }
+include_once 'footer.php';
 ?>
 
 <!DOCTYPE html>
