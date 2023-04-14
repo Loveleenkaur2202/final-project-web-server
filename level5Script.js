@@ -19,6 +19,8 @@ $(document).ready(function() {
 
 		if (userMinLetter == minLetter && userMaxLetter == maxLetter) {
 			$("#result").text("Congratulations! You found the correct minimum and maximum letters.");
+			session_start(); 
+			$_SESSION['level_won'] = true;
 			$("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
 			$("#game-form").append("<p><a href='level6.php'>Go to Next level</a></p>");
 

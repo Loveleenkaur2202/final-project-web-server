@@ -1,61 +1,40 @@
-
 <?php
-
-// Generating an array of 6 random numbers between 1 and 100
-$numbers = array();
+// Generate 6 random numbers from 0 to 100
+$numbers = [];
 for ($i = 0; $i < 6; $i++) {
-  $numbers[] = rand(1, 100);
+    $numbers[] = rand(0, 100);
 }
-
-// Check if the form has been submitted
-if (isset($_POST['submit'])) {
-
-  $sorted_numbers = $_POST['user_input'];
-
-  rsort($numbers);
-
-  if ($sorted_numbers == $numbers) {
-    echo "Congratulations! You sorted the numbers correctly.";
-  } else {
-    echo "Sorry, the sorted numbers did not match the original numbers. Please try again.";
-  }
-}
-
+// Save the numbers to a session variable
+session_start();
+$_SESSION['numbers'] = $numbers;
 ?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-<?php
+    <?php
         include_once 'header.php';
+        
+        if (!isset($_SESSION['level_won']) || $_SESSION['level_won'] !== true) {
+          echo '<h2><a href="level3.php">Complete Level 3 to continue</a></h2>';
+          exit; 
+        }
     ?>
-	<title>Random Letters Game</title>
+    <title>Number Arrangement</title>
     <link href="css/games.css" rel="stylesheet" type="text/css">
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
 </head>
 <body>
-	<div id="game-container">
-		
-		<h3>Sort the given numbers in descending order</h3>
-		<ul>
-            <?php foreach ($numbers as $number): ?>
-            <li><?php echo $number; ?></li>
-            <?php endforeach; ?>
-        </ul>
-		<form id="game-form" >
-			<label for="user_input">Enter the numbers here separated by commas : </label>
-			<input type="text" id="user_input" name="user_input">
-			<br><br><br>
-			<input type="submit" value="Submit" name ="submit">
-      <a href ="logout.php"><input type="button" value="End session"></a>
-            
-             <br><br>
-		</form>
-		<p id="result"></p>
-	</div>
-	
+    
+    <h3>Arrange the numbers below in descending order separated by commas</h3>
+    <p id="numbers"><?php echo implode(', ', $numbers); ?></p>
+    <form id="form" >
+
+        <input type="numbers" id="input" /><br>
+        <input type="Submit" id="submit">
+    </form>
+    
+    <p id="result"></p>
+    <script src="level4Script.js"></script>
     <?php
         include_once 'footer.php';
     ?>

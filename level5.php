@@ -3,7 +3,16 @@
 <head>
 <?php
         include_once 'header.php';
+        
+	
+        session_start(); // Start the session
+        if (!isset($_SESSION['level_won']) || $_SESSION['level_won'] !== true) {
+          echo '<h2><a href="level4.php">Complete Level 4 to continue</a></h2>';
+          exit; 
+        }
+    
     ?>
+
 	<title>Random Letters Game</title>
     <link href="css/games.css" rel="stylesheet" type="text/css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -30,7 +39,7 @@
 	</div>
 	
  
-	<script src="script.js"></script>
+	<script src="level5Script.js"></script>
     <?php
         include_once 'footer.php';
     ?>

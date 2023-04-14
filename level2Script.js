@@ -39,6 +39,8 @@ function generateRandomLetters() {
     // Check if user guesses are correct and update lives accordingly
     if (isDescending && JSON.stringify(userGuesses) === JSON.stringify(lettersToGuess)) {
       console.log("Congratulations! You guessed correctly!");
+      session_start(); 
+	$_SESSION['level_won'] = true;
       window.location.href = 'level3.php';
     } else {
       lives--;

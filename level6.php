@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include_once 'header.php';?>
+    <?php include_once 'header.php';
+	
+		session_start(); // Start the session
+		if (!isset($_SESSION['level_won']) || $_SESSION['level_won'] !== true) {
+			echo '<h2><a href="level5.php">Complete Level 5 to continue</a></h2>';
+			exit; 
+		}
+
+?>
 	<title>Find Maximum and Minimum Letters</title>
     <link href="css/games.css" rel="stylesheet" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -41,6 +49,8 @@
 				var max = parseInt($("#max").val());
 				if (min == Math.min(...letters) && max == Math.max(...letters)) { // check if the user input is correct
 					$("#result").text("Congratulations! You found the correct maximum and minimum letters.");
+					session_start(); // Start the session
+					$_SESSION['level_won'] = true;
                     $("#game-form").append("<p><a href='level6.php'>Play Again</a></p>");
                     $("#game-form").append("<p><a href='main.php'>Home Page</a></p>");
                     $("#game-form").append("<p><a href='logout.php'>Sign Out</a></p>");
