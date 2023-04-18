@@ -45,10 +45,10 @@ function generateRandomLetters() {
     }  else {
       lives--;
       alert('Wrong order! ');
-     /*  if (lives === 0) {
+       if (lives === 0) {
         console.log("Game over. You ran out of lives.");
         location.href="logout.php";
-      }*/
+      }
     }  
   });
   
