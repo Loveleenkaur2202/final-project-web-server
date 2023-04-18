@@ -4,10 +4,10 @@
     <?php include_once 'header.php';
 	
 		session_start(); // Start the session
-		if (!isset($_SESSION['level_won']) || $_SESSION['level_won'] !== true) {
+		/* if (!isset($_SESSION['level_won']) || $_SESSION['level_won'] !== true) {
 			echo '<h2><a href="level5.php">Complete Level 5 to continue</a></h2>';
 			exit; 
-		}
+		} */
 
 ?>
 	<title>Find Maximum and Minimum Letters</title>

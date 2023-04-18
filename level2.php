@@ -6,10 +6,10 @@
         
 	
         session_start(); // Start the session
-        if (!isset($_SESSION['level_won']) || $_SESSION['level_won'] !== true) {
+        /* if (!isset($_SESSION['level_won']) || $_SESSION['level_won'] !== true) {
           echo '<h2><a href="level1.php">Complete Level 1 to continue</a></h2>';
           exit; 
-        }
+        } */
     
     ?>
 

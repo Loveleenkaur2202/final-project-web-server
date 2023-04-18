@@ -39,7 +39,7 @@ function checkOrder() {
   alert('Congratulations! You guessed the letters in ascending order!');
   session_start(); 
 	$_SESSION['level_won'] = true;
-  <a href  = 'level2.php'>Go to level 2</a>
+  window.location.href = 'level2.php';
   
 }
 
