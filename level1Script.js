@@ -11,7 +11,7 @@ for (let i = 0; i < 6; i++) {
 letters.sort();
 
 // Variable to keep track of the number of lives
-let lives = 6;
+//let lives = 6;
 
 // Function to check if the user's input is in ascending order
 function checkOrder() {
@@ -21,7 +21,7 @@ function checkOrder() {
     alert('Please enter exactly 6 letters!');
     return;
   }
-  for (let i = 0; i < 6; i++) {
+   for (let i = 0; i < 6; i++) {
     if (inputArray[i] !== letters[i]) {
       lives--;
       if (lives == 0) {
@@ -39,7 +39,7 @@ function checkOrder() {
   alert('Congratulations! You guessed the letters in ascending order!');
   session_start(); 
 	$_SESSION['level_won'] = true;
-  window.location.href = 'level2.php';
+  <a href  = 'level2.php'>Go to level 2</a>
   
 }
 
