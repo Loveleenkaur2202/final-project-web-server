@@ -5,7 +5,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
    echo'<a href="index.php">Login to access game levels</a>';
     exit();
 }
-include_once 'footer.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +33,8 @@ include_once 'footer.php';
 
 
   </body>
- 
+ <?php
+  include_once 'footer.php';
+ ?>
  
 </html>
