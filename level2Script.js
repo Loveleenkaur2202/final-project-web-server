@@ -39,7 +39,8 @@ function checkOrder() {
  alert('Congratulations! You guessed the letters in ascending order!');
   //session_start(); 
 //$_SESSION['level_won'] = true; 
-  
+$("#form").append("<p><a href='level2.php'>Play Again</a></p>");
+$("#form").append("<p><a href='level3.php'>Go to Next level</a></p>");
   
 }
 

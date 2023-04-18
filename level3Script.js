@@ -8,6 +8,8 @@ document.getElementById("form").addEventListener("submit", function(event) {
          alert("Congratulations! You have arranged the numbers correctly.");
          //session_start(); 
 			//$_SESSION['level_won'] = true;
+            $("#form").append("<p><a href='level3.php'>Play Again</a></p>");
+			$("#form").append("<p><a href='level4.php'>Go to Next level</a></p>");
     } else {
         alert("Oops! The numbers are not arranged correctly. Please try again.");
        
