@@ -6,8 +6,8 @@ document.getElementById("form").addEventListener("submit", function(event) {
     let lives = 6;
     if (input === sortedNumbers) {
          alert("Congratulations! You have arranged the numbers correctly.");
-         session_start(); 
-			$_SESSION['level_won'] = true;
+         //session_start(); 
+			//$_SESSION['level_won'] = true;
     } else {
         alert("Oops! The numbers are not arranged correctly. Please try again.");
        
