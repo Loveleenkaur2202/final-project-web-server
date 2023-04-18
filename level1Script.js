@@ -36,10 +36,10 @@ function checkOrder() {
       }
     }
   }
- alert('Congratulations! You guessed the letters in ascending order!');
+  alert('Congratulations! You guessed the letters in ascending order!');
   session_start(); 
-      $_SESSION['level_won'] = true; 
-  
+  $_SESSION['level_won'] = true; 
+  window.location.href = "level2.php";
   
 }
 

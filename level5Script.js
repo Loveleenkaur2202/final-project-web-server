@@ -18,12 +18,13 @@ $(document).ready(function() {
 		}
 
 		if (userMinLetter == minLetter && userMaxLetter == maxLetter) {
-			$("#result").text("Congratulations! You found the correct minimum and maximum letters.");
+			
+			//$("#result").text("Congratulations! You found the correct minimum and maximum letters.");
 			session_start(); 
 			$_SESSION['level_won'] = true;
 			$("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
 			$("#game-form").append("<p><a href='level6.php'>Go to Next level</a></p>");
-
+			
 		} else if (userMinLetter == minLetter) {
 			$("#result").text("You found the correct minimum letter, but the maximum letter is incorrect.");
 			$("#game-form").append("<p><a href='level5.php'>Play Again</a></p>");
