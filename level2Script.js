@@ -11,7 +11,7 @@ function generateRandomLetters() {
   
   let lettersToGuess = generateRandomLetters(); 
   
-  //let lives = 6; 
+  let lives = 6; 
   
   
   console.log("Randomly generated letters: " + lettersToGuess.join(" "));
@@ -41,7 +41,10 @@ function generateRandomLetters() {
       console.log("Congratulations! You guessed correctly!");
       session_start(); 
 	$_SESSION['level_won'] = true;
-      window.location.href = 'level3.php';
+  $_SESSION['level_won'] = true;
+  $("#game-form").append("<p><a href='level2.php'>Play Again</a></p>");
+  $("#game-form").append("<p><a href='level3.php'>Go to Next level</a></p>");
+
     }  else {
       lives--;
       alert('Wrong order! ');
