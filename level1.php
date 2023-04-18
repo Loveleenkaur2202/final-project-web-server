@@ -32,9 +32,7 @@ include_once 'footer.php';
   <script src="level1Script.js"></script>
 
 
-
-<?php
-        include_once 'footer.php';
-?>
-</body>
+  </body>
+ 
+ 
 </html>

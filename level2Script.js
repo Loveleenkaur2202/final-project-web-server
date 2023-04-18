@@ -11,7 +11,7 @@ function generateRandomLetters() {
   
   let lettersToGuess = generateRandomLetters(); 
   
-  let lives = 6; 
+  //let lives = 6; 
   
   
   console.log("Randomly generated letters: " + lettersToGuess.join(" "));
@@ -42,13 +42,13 @@ function generateRandomLetters() {
       session_start(); 
 	$_SESSION['level_won'] = true;
       window.location.href = 'level3.php';
-    } else {
+    }  else {
       lives--;
-      console.log("Incorrect guesses. Lives remaining: " + lives);
-      if (lives === 0) {
+      alert('Wrong order! ');
+     /*  if (lives === 0) {
         console.log("Game over. You ran out of lives.");
         location.href="logout.php";
-      }
-    }
+      }*/
+    }  
   });
   
