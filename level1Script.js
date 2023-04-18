@@ -11,7 +11,7 @@ for (let i = 0; i < 6; i++) {
 letters.sort();
 
 // Variable to keep track of the number of lives
-//let lives = 6;
+let lives = 6;
 
 // Function to check if the user's input is in ascending order
 function checkOrder() {
@@ -24,16 +24,16 @@ function checkOrder() {
   for (let i = 0; i < 6; i++) {
     if (inputArray[i] !== letters[i]) {
       lives--;
-      //if (lives === 0) {
-        //alert('Game Over! You ran out of lives.');
-        //location.href = "logout.php"; // Reload the page to start a new game
+      if (lives == 0) {
+        alert('Game Over! You ran out of lives.');
+        location.href = "logout.php"; // Reload the page to start a new game
       }
        else {
         
         alert('Wrong order!');
         
         return;
-      //}
+      }
     }
   }
   alert('Congratulations! You guessed the letters in ascending order!');
