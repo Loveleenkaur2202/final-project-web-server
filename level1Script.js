@@ -36,15 +36,10 @@ function checkOrder() {
       }
     }
   }
-  alert('Congratulations! You guessed the letters in ascending order!');
- 
- 
-			$("#game-form").append("<p><a href='level1.php'>Play Again</a></p>");
-			$("#game-form").append("<p><a href='level2.php'>Go to Next level</a></p>");
-      session_start(); 
-      $_SESSION['level_won'] = true;
-
-
+ alert('Congratulations! You guessed the letters in ascending order!');
+  session_start(); 
+      $_SESSION['level_won'] = true; 
+  
   
 }
 
