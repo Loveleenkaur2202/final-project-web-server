@@ -25,8 +25,8 @@
             if (password_verify($password, $row['passCode'])) {
                 $_SESSION['username'] = $row['userName'];
                
-            session_start();
-            $_SESSION['logged_in'] = true;
+            //session_start();
+            //$_SESSION['logged_in'] = true;
 // Redirect to the level 1 game page or set a cookie to remember the login status
 
                 

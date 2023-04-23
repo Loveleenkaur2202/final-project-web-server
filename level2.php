@@ -4,6 +4,7 @@
 <head>
 <?php
         include_once 'header.php';
+        
 ?>
 	<title>Random Letters Game</title>
     <link href="css/games.css" rel="stylesheet" type="text/css">

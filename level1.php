@@ -1,10 +1,10 @@
 <?php
 session_start();
 include_once 'header.php';
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+/* if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
    echo'<a href="index.php">Login to access game levels</a>';
     exit();
-}
+} */
 
 ?>
 

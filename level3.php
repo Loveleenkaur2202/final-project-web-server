@@ -13,11 +13,11 @@ $_SESSION['numbers'] = $numbers;
 <head>
     <?php
         include_once 'header.php';
-        
-       /*  if (!isset($_SESSION['level_won']) || $_SESSION['level_won'] !== true) {
+        /* 
+        if (!isset($_SESSION['level_won']) || $_SESSION['level_won'] !== true) {
           echo '<h2><a href="level2.php">Complete Level 2 to continue</a></h2>';
           exit; 
-        } */
+        }  */
     ?>
     <title>Number Arrangement</title>
     <link href="css/games.css" rel="stylesheet" type="text/css">
